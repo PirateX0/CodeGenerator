@@ -1,0 +1,4 @@
+1.添加sqlHelper，改sqlHelper的命名空间，
+在解决方案里对应的项目中添加System.Configuration引用。
+2.设置Config。
+3.BLL引用Utility类库。

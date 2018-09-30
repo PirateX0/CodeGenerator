@@ -1,0 +1,12 @@
+todo:
+1.如果是非空字段，不需要object对象。
+        public int Insert(Power model)
+        {
+            object o = DBNull.Value;
+            return Convert.ToInt32(SQLHelper.ExecuteScalar(
+           "insert into T_Powers (Name) output inserted.Id values(@Name)"
+            , new SqlParameter("Name", model.Name)
+            ));
+        }
+2.为DAL、BLL、Model分别选择生成位置，直接生成到项目中可以避免2次拷贝。
+3.在appconfig中设置连接字符串。
